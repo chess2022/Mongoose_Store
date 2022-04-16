@@ -1,0 +1,42 @@
+module.exports = [
+  {
+    name: "",
+    description: "",
+    img: "",
+    price: "",
+    qty: "",
+    tags: "",
+  },
+  {
+    name: "",
+    description: "",
+    img: "",
+    price: "",
+    qty: "",
+    tags: "",
+  },
+  {
+    name: "",
+    description: "",
+    img: "",
+    price: "",
+    qty: "",
+    tags: "",
+  },
+  {
+    name: "",
+    description: "",
+    img: "",
+    price: "",
+    qty: "",
+    tags: "",
+  },
+  {
+    name: "",
+    description: "",
+    img: "",
+    price: "",
+    qty: "",
+    tags: "",
+  },
+];
