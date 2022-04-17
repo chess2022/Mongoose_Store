@@ -23,5 +23,7 @@ db.on("error", (err) => console.log(err.message + " is mongo not running?"));
 db.on("connected", () => console.log("mongoose connected"));
 db.on("disconnected", () => console.log("mongo disconnected"));
 
-const PORT = process.env.PORT || 3000;
+
+
+const PORT = process.env.PORT || 3001;
 app.listen(PORT, () => console.log("we are running"));

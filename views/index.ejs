@@ -2,10 +2,29 @@
 <html>
 <%- include("partials/head.ejs") %>
 <body>
-    <header>
-
+    <header class="topnav">
+        <!-- Top Navigation Menu -->
+        <div>
+        <a href="#home" class="active">Logo</a>
+        </div>
+        <!-- Navigation links (hidden by default) -->
+        <div id="myLinks">
+            <a href="#news">News</a>
+            <a href="#contact">Contact</a>
+            <a href="#about">About</a>
+        </div>
+        <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
     </header>
     <main>
-
+        <div class="introMessage">
+            <div class="note">
+                <p>beautiful blooms<br> grow your own beautiful blooms with our bulbs and seeds<br>
+                <br>choose a color to begin</p>
+            </div>
+        </div>
+        <div class="mainContent"></div>
     </main>
 </body>
