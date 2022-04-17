@@ -34,7 +34,7 @@ main {
 
 .note {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     width: 60%;
     height: 50%;
     line-height: 1.5;
@@ -42,13 +42,15 @@ main {
     outline: 1px solid black;
     outline-offset: -5px;
     align-items: center;
+    justify-content: center;
     padding: 1em;
 }
 
 p {
     position: relative;
-    padding: 1em 0;
+    /* padding: 1em 0; */
     margin: 0;
+    padding: 0;
     text-align:center;
 }
 
@@ -94,6 +96,29 @@ p {
 
 /* Style the active link (or home/logo) */
 .active {
-    background-color: #04AA6D;
+    background-color: #0b6c15;
     color: white;
+}
+
+.logo {
+    max-width: 100px;
+}
+
+#whiteLogo {
+    max-height: 30px;
+    padding: 0;
+}
+
+#siteName {
+    max-height: 48px;
+    padding: 0;
+}
+
+#title {
+    font-family: 'Corinthia', cursive;
+    font-size: 6vh;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    text-align:center; 
 }
