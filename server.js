@@ -11,7 +11,7 @@ app.use("/static", express.static("public"));
 app.use(methodOverride ("_method"));
 
 // Routes / Controllers
-app.use("/products", productsController)
+app.use("/flowers", productsController)
 
 mongoose.connect(process.env.DATABASE_URL, {
   useNewUrlParser: true,

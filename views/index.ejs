@@ -10,9 +10,24 @@
                 <div>
                     <h1 id="title">beautiful blooms</h1>
                     <p>grow your own beautiful blooms with our bulbs and seeds<br>
-                <br>choose a color to begin</p></div>
+                <br>choose a color to begin</p>
+                </div>
+                <div class="sortColors">
+                    <a href="javascript:void(0);" onclick="showReds()"><button class="redButton"></button></a>
+                    <button class="pinkButton"></button>
+                    <a href="javascript:void(0);" onclick="showOranges()"><button class="orangeButton"></button></a>
+                    <button class="yellowButton"></button>
+                    <button class="bluePurpleButton"></button>
+                    <button class="whiteButton"></button>
+                </div>
             </div>
         </div>
-        <div class="mainContent"></div>
+        <div id="mainContent">
+            <div id="productBoxes"><% flowers.forEach(flower => { %>
+                <a href="/flowers/<%=flower._id; %>"> 
+                    <img class="flowerImages" src="<%=flower.img; %>"></a>
+                 <% }) %> 
+            </div>  
+        </div>
     </main>
 </body>

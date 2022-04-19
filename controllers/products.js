@@ -1,19 +1,21 @@
 const express = require("express");
-const Product = require("../models/product");
+const Flower = require("../models/product");
 const productRouter = express.Router();
 
 // Seed
-const productSeed = require("../models/seed");
+const flowerSeed = require("../models/seed");
 productRouter.get("/seed", (req, res) => {
-    Product.deleteMany({}, (error, allProducts) => {});
-    Product.create(productSeed, (error, data) => {
-        res.redirect("/products");
+    Flower.deleteMany({}, (error, allFlowers) => {});
+    Flower.create(flowerSeed, (error, data) => {
+        res.redirect("/flowers");
     })
 });
 
 // Index route - show main page
 productRouter.get("/", (req, res) => {
-  res.render("index.ejs");
+    Flower.find({}, (err, allFlowers) => {    
+    res.render("index.ejs", { flowers: allFlowers });
+    });
 });
 
 
