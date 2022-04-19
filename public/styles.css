@@ -52,6 +52,7 @@ p {
     margin: 0;
     padding: 0;
     text-align:center;
+    font-size: 2vh;
 }
 
 .mainContent {
@@ -70,6 +71,8 @@ p {
 /* Hide the links inside the navigation menu (except for logo/home) */
 .topnav #myLinks {
     display: none;
+    margin-right: 50px;
+
 }
 
 /* Style navigation menu links */
