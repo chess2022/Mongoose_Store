@@ -15,29 +15,26 @@ header {
 
 main {
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: column;
     width: 100%;
-    height: 610px;
+    height: 500px;
     max-width: 1000px;
     justify-content: space-between;
     background-image: url("images/main_background.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-}
-
-.introMessage {
-    display: flex;
     align-items: center;
     justify-content: center;
-    width: 40%;
+
 }
+
 
 .note {
     display: flex;
     flex-direction: column;
     width: 60%;
-    height: 50%;
-    line-height: 1.5;
+    height: 30%;
+    /* line-height: 1.5; */
     background-color: white;
     outline: 1px solid black;
     outline-offset: -5px;
@@ -52,7 +49,9 @@ p {
     margin: 0;
     padding: 0;
     text-align:center;
-    font-size: 2vh;
+    font-size: 1.75vh;
+    line-height: 1.5;
+    padding-bottom: 10px;
 }
 
 
@@ -104,7 +103,8 @@ p {
 }
 
 .logo {
-    max-width: 100px;
+    max-width: 80px;
+    padding-top: 10px;
 }
 
 #whiteLogo {
@@ -119,24 +119,33 @@ p {
 
 #title {
     font-family: 'Corinthia', cursive;
-    font-size: 6vh;
+    font-size: 7vh;
     position: relative;
     margin: 0;
     padding: 0;
     text-align:center; 
 }
 
-#mainContent {
-    display: none;
+.results {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+}
+
+
+#products {
+    display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
-    width: 60%;
-    background-color: rgba(256, 256, 256, 0.90);;
+    width: 100%;
+    /* background-color: rgba(256, 256, 256, 0.90);; */
 }
 
 #productBoxes {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 200px);
     justify-content: center;
     width: 80%;
     /* background-color: rgba(256, 256, 256, 0.75);; */
@@ -145,9 +154,9 @@ p {
 
 .flowerImages {
     /* display: none; */
-    width: 100px;
-    height: 100px;
-    outline: 1px solid white;
+    width: 150px;
+    height: 150px;
+    outline: 1px solid rgb(131, 131, 131);
     /* padding: 10px; */
     margin: 5px;
 
@@ -155,6 +164,11 @@ p {
 
 .sortColors {
     display: flex;
+    justify-content: center;
+}
+
+.sortColors a {
+    margin: 10px;
 }
 
 .redButton {
@@ -162,7 +176,7 @@ p {
     width: 20px;
     height: 20px;
     border: none;
-    outline: 1px solid black;
+    outline: 1px solid rgb(131, 131, 131);
 }
 
 .pinkButton {
@@ -170,7 +184,7 @@ p {
     width: 20px;
     height: 20px;
     border: none;
-    outline: 1px solid black;
+    outline: 1px solid rgb(131, 131, 131);
 }
 
 .orangeButton {
@@ -178,7 +192,7 @@ p {
     width: 20px;
     height: 20px;
     border: none;
-    outline: 1px solid black;
+    outline: 1px solid rgb(131, 131, 131);
 }
 
 .yellowButton {
@@ -186,7 +200,7 @@ p {
     width: 20px;
     height: 20px;
     border: none;
-    outline: 1px solid black;
+    outline: 1px solid rgb(131, 131, 131);
 }
 
 .bluePurpleButton {
@@ -194,7 +208,7 @@ p {
     width: 20px;
     height: 20px;
     border: none;
-    outline: 1px solid black;
+    outline: 1px solid rgb(131, 131, 131);
 }
 
 .whiteButton {
@@ -202,5 +216,5 @@ p {
     width: 20px;
     height: 20px;
     border: none;
-    outline: 1px solid black;
+    outline: 1px solid rgb(131, 131, 131);
 }

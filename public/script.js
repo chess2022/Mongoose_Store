@@ -8,10 +8,9 @@ function hamburgerMenu() {
   }
 }
 
-const flower = require("../models/product");
 
-function showReds() {
-  var r = document.getElementById("mainContent");
+function showRed() {
+  var r = document.getElementById("products");
   if (r.style.display === "flex") {
     r.style.display = "none";
   } else {
@@ -19,14 +18,12 @@ function showReds() {
   }
 }
 
-function showOranges() {
-  let orange = flower.tags
-  orange = "orange"
-  const o = document.getElementById("productBoxes");
-  if (o.style.display === "flex") {
-    o.style.display = "none";
+function showAll() {
+  const x = document.getElementById("products");
+  if (x.style.display === "flex") {
+    x.style.display = "none";
   } else {
-    o.style.display = "flex";
+    x.style.display = "flex";
   }
 }
 
