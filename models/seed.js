@@ -294,7 +294,7 @@ module.exports = [
     name: "Calla Lily",
     description:
       "Neither a calla nor a lily, the calla lily—which grows 24 to 36 inches tall—is part of the Jack-in-the-pulpit family. Its trumpet-shape flowers and arrowhead-shape leaves rise directly from rhizomes—no stems needed.",
-    img: "/static/images/whites/orangeZinnia.jpg",
+    img: "/static/images/whites/callaLily.jpg",
     price: "12.99",
     qty: "33",
     tags: "white",

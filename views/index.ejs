@@ -8,13 +8,13 @@
                 <div><img class="logo" src="/static/images/flower_logo-01.png"></div>
                 <div>
                     <h1 id="title">beautiful blooms</h1>
-                    <p>grow your own beautiful blooms with our top-quality bulbs and seeds<br>shipped direct from our door to yours<br>
+                    <p>grow your own beautiful blooms with our top-quality bulbs, seeds and bare roots shipped direct from our door to yours<br>
                 </div>
             </div>
     </main>
     <div class="results">
             <div class="sortColors">
-
+                <a href="javascript:void(0);" onclick="showRed()"><button class="grad1"></button></a>
                 <a href="javascript:void(0);" onclick="showRed()"><button class="redButton"></button></a>
                 <a href="javascript:void(0);" onclick="showPink()"><button class="pinkButton"></button></a>
                 <a href="javascript:void(0);" onclick="showOrange()"><button class="orangeButton"></button></a>
@@ -23,12 +23,13 @@
                 <a href="javascript:void(0);" onclick="showWhite()"><button class="whiteButton"></button></a>
             </div>
             <div id="products">
-            <div id="productBoxes">
-                <div><% flowers.forEach(flower => { %>
-                <a href="/flowers/<%=flower._id; %>"> 
-                    <img class="flowerImages" src="<%=flower.img; %>"></a>
-                    <h3><%= flower.name %></h3><h4><%= flower.price %> </h4>
-                 <% }) %></div> 
+            
+                <% flowers.forEach(flower => { %>
+                <a id="productBoxes" href="/flowers/<%=flower._id; %>"> 
+                    <img class="flowerImages" src="<%=flower.img; %>">
+                    <h4><%= flower.name %></h4><h5><%= flower.price %> </h5>
+                </a>
+                 <% }) %>
             </div>  
         </div>
      </div>
