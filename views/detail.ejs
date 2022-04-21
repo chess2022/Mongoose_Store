@@ -4,6 +4,24 @@
 <body>
     <%- include("partials/header.ejs") %>
     <main>
-
+        <div class="note">
+            <div class="detail">            
+                <div class="flowerPic">
+                    <img src="<%=flower.img%>">
+                    <div id="actions">
+                        <a href="/flowers/<%=flower._id %>/edit"><button>EDIT</button></a>
+                        <form action="/flowers/<%=flower._id; %>?_method=DELETE" method="POST">
+                            <button type="submit" value="DELETE">DELETE</button>
+                        </form>
+                    </div>
+                </div> 
+                <div class="flowerDetail">
+                    <h2><%= flower.name %></h2>
+                    <p><%= flower.description %> </p>
+                    <h3>$<%= flower.price %></h3>
+                    <h5>Items remaining <%= flower.qty %> </h5>
+                </div>
+            </div>
+        </div>
     </main>
 </body>

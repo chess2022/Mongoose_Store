@@ -13,24 +13,23 @@
             </div>
     </main>
     <div class="results">
-            <div class="sortColors">
-                <a href="javascript:void(0);" onclick="showRed()"><button class="grad1"></button></a>
-                <a href="javascript:void(0);" onclick="showRed()"><button class="redButton"></button></a>
-                <a href="javascript:void(0);" onclick="showPink()"><button class="pinkButton"></button></a>
-                <a href="javascript:void(0);" onclick="showOrange()"><button class="orangeButton"></button></a>
-                <a href="javascript:void(0);" onclick="showYellow()"><button class="yellowButton"></button></a>
-                <a href="javascript:void(0);" onclick="showbluePurple()"><button class="bluePurpleButton"></button></a>
-                <a href="javascript:void(0);" onclick="showWhite()"><button class="whiteButton"></button></a>
-            </div>
-            <div id="products">
+            <!-- <div class="sortColors"> -->
+                <!-- <button id="grad1" data-sort="tags"></button>
+                <button id="redButton" data-sort="tags"></button>
+                <button id="pinkButton" data-sort="tags"></button>
+                <button id="orangeButton" data-sort="tags"></button>
+                <button id="yellowButton" data-sort="tags"></button>
+                <button id="bluePurpleButton" data-sort="tags"></button>
+                <button id="whiteButton" data-sort="tags"></button>
+            </div> -->
+            <div class="list" id="products">
             
                 <% flowers.forEach(flower => { %>
                 <a id="productBoxes" href="/flowers/<%=flower._id; %>"> 
                     <img class="flowerImages" src="<%=flower.img; %>">
-                    <h4><%= flower.name %></h4><h5><%= flower.price %> </h5>
+                    <h4><%= flower.name %></h4><h5><%= flower.price %></h5><br> <h6 class="tags"><%= flower.tags %> </h6>
                 </a>
                  <% }) %>
             </div>  
-        </div>
-     </div>
+    </div>
 </body>

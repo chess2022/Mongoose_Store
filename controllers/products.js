@@ -18,6 +18,13 @@ productRouter.get("/", (req, res) => {
     });
 });
 
+// Show route - show flower detail
+productRouter.get("/:id", (req, res) => {
+    Flower.findById(req.params.id, (err, flower) => {
+        res.render("detail.ejs", { flower })
+    })
+})
+
 
 // Exports
 module.exports = productRouter;

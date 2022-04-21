@@ -9,21 +9,17 @@ function hamburgerMenu() {
 }
 
 
-function showRed() {
-  var r = document.getElementById("products");
-  if (r.style.display === "flex") {
-    r.style.display = "none";
-  } else {
-    r.style.display = "flex";
-  }
-}
+// var options = {
+//   valueNames: ["tags"],
+// };
 
-function showAll() {
-  const x = document.getElementById("products");
-  if (x.style.display === "flex") {
-    x.style.display = "none";
-  } else {
-    x.style.display = "flex";
-  }
-}
+// var userList = new List("list", options);
 
+
+
+// var listObj = new List("list", options);
+
+// $("#redButton").on("keyup", function () {
+//   var searchString = $(this).val("red");
+//   listObj.search(searchString);
+// });
