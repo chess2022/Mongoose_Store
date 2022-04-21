@@ -18,7 +18,7 @@
                 <div class="flowerDetail">
                     <h2><%= flower.name %></h2>
                     <p><%= flower.description %> </p>
-                    <h3>$<%= flower.price %></h3>
+                    <div id="buy"><h3>$<%= flower.price %></h3><button type="submit" method="POST"><img src="/static/images/shopping-cart.png"> BUY</button> </div>
                     <h5>Items remaining <%= flower.qty %> </h5>
                 </div>
             </div>

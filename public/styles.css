@@ -261,15 +261,55 @@ p {
 #actions {
     display:flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: left;
     padding-right: 20px;
-
 }
+
+#actions a {
+    text-decoration: none;
+}
+
+#actions button {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    height: 25px;
+    font-family: 'Raleway', sans-serif;
+    color: rgb(18, 18, 18);
+    margin-right: 10px;
+}
+
 
 .flowerDetail {
 
 }
 
-.flowerDetail p {
+.flowerDetail p, h2 {
     text-align: left;
+    padding: 0;
+    padding-bottom: 5px;
+    margin: 0;
+}
+
+#buy {
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+#buy button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 25px;
+    font-family: 'Raleway', sans-serif;
+    color: rgb(18, 18, 18);
+
+}
+
+
+#buy img {
+    max-width: 20px;
+    max-height: 20px;
+    padding-right: 5px;
 }
