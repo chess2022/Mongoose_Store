@@ -42,9 +42,14 @@ productRouter.delete("/:id", (req, res) => {
 
 // Update route - update flower to the data file
 productRouter.put("/:id", (req, res) => {
+    Flower.findById(req.params.id, (err, boughtFlower) => {
+        let flowerQty = boughtFlower.qty;
+        let updatedQty = flowerQty - req.body.qty;
+        req.body.qty = updatedQty;
     Flower.findByIdAndUpdate(req.params.id, req.body, (err, updatedFlower) => {
       if (err) return res.send(err);
       res.redirect(`/flowers/${req.params.id}`);
+    });
     })
 })
 
