@@ -4,11 +4,14 @@ const methodOverride = require("method-override");
 const productsController = require("./controllers/products");
 const app = express();
 require("dotenv").config();
+const fileUpload = require("express-fileupload");
+const path = require("path");
 
 // middleware
 app.use(express.urlencoded({ extended: true }));
 app.use("/static", express.static("public"));
 app.use(methodOverride ("_method"));
+app.use(fileUpload());
 
 // Routes / Controllers
 app.use("/flowers", productsController)

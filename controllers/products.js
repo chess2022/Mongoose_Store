@@ -2,6 +2,7 @@ const express = require("express");
 const Flower = require("../models/product");
 const productRouter = express.Router();
 
+
 // Seed
 const flowerSeed = require("../models/seed");
 productRouter.get("/seed", (req, res) => {
@@ -18,12 +19,60 @@ productRouter.get("/", (req, res) => {
     });
 });
 
+// New route
+productRouter.get("/new", (req, res) => {
+    Flower.find({}, (err, flower) => {
+    res.render("new.ejs", { flower, index: req.params.id });
+    })
+})
+
+// create
+productRouter.post("/", (req, res) => {
+    Flower.create(req.body, (err, newFlower) => {
+        // if (!req.files) {
+        //     return res.status(400).send("No files were uploaded.");
+        // }
+        // const file = req.files.img;
+        // const path = "mongoose_store/public/images/other/" + file.name;
+
+        // file.mv(path, (err) => {
+        //     if (err) {
+        //         return res.status(500).send(err);
+        //     }
+        // });
+    res.redirect("/flowers");
+    console.log(newFlower)
+  });
+});
+
+// Delete
+productRouter.delete("/:id", (req, res) => {
+  Flower.findByIdAndDelete(req.params.id, (err) => {
+    res.redirect("/flowers");
+  });
+});
+
+// Update route - update flower to the data file
+productRouter.put("/:id", (req, res) => {
+    Flower.findByIdAndUpdate(req.params.id, req.body, (err, flower) => {
+      if (err) return res.send(err);
+      res.redirect(`/flowers/${req.params.id}`, flower);
+    })
+})
+
+// Edit route - edit an existing flower
+productRouter.get("/:id/edit", (req, res) => {
+    Flower.findById(req.params.id, (err, flower) => {
+    res.render("edit.ejs", { flower, index: req.params.id });
+    });
+});
+
 // Show route - show flower detail
 productRouter.get("/:id", (req, res) => {
     Flower.findById(req.params.id, (err, flower) => {
         res.render("detail.ejs", { flower })
     })
-})
+});
 
 
 // Exports
