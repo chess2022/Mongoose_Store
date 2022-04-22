@@ -29,19 +29,8 @@ productRouter.get("/new", (req, res) => {
 // create
 productRouter.post("/", (req, res) => {
     Flower.create(req.body, (err, newFlower) => {
-        // if (!req.files) {
-        //     return res.status(400).send("No files were uploaded.");
-        // }
-        // const file = req.files.img;
-        // const path = "mongoose_store/public/images/other/" + file.name;
-
-        // file.mv(path, (err) => {
-        //     if (err) {
-        //         return res.status(500).send(err);
-        //     }
-        // });
     res.redirect("/flowers");
-    console.log(newFlower)
+    // console.log(newFlower)
   });
 });
 
@@ -54,9 +43,9 @@ productRouter.delete("/:id", (req, res) => {
 
 // Update route - update flower to the data file
 productRouter.put("/:id", (req, res) => {
-    Flower.findByIdAndUpdate(req.params.id, req.body, (err, flower) => {
+    Flower.findByIdAndUpdate(req.params.id, req.body, (err, updatedFlower) => {
       if (err) return res.send(err);
-      res.redirect(`/flowers/${req.params.id}`, flower);
+      res.redirect(`/flowers/${req.params.id}`);
     })
 })
 

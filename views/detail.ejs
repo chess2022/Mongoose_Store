@@ -18,7 +18,19 @@
                 <div class="flowerDetail">
                     <h2><%= flower.name %></h2>
                     <p><%= flower.description %> </p>
-                    <div id="buy"><h3>$<%= flower.price %></h3><button type="submit" method="POST"><img src="/static/images/shopping-cart.png"> BUY</button> </div>
+                    <div id="buy">
+                        <h3>$<%= flower.price %></h3>
+                        <form action="/flowers/<%= flower.id %>?_method=put" method="POST">
+                            <!-- <% if (flower.qty > 0) { %> -->
+                                <div class="buy">
+                                <input id="qty" type="number" name="qty" value="1">
+                                <button type="submit"><img src="/static/images/shopping-cart.png"> BUY</button></div>
+                            <!-- <% } else if (flower.qty <= 0) {%> 
+                                <h3>Out of Stock!</h3>
+                            <% } %>  -->
+                
+                        </form> 
+                    </div>
                     <h5>Items remaining <%= flower.qty %> </h5>
                 </div>
             </div>

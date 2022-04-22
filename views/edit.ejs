@@ -17,7 +17,7 @@
                 <div class="flowerDetail">
                     <h2><%= flower.name %></h2>
                     <p><%= flower.description %> </p><br>
-                    <div id="buy"><form id="updateFlower" action="/flowers/<%= index %>?_method=PUT" method="post"><input type="number" name="price" placeholder="price" /></div>
+                    <div id="buy"><form id="updateFlower" action="/flowers/<%= index %>?_method=PUT" method="post"><input type="number" step="0.01" name="price" placeholder="price" /></div>
                     <h5>Items remaining <input type="number" name="qty" placeholder="qty" ></h5>
                     <a href="/flowers/<%=flower._id %>"><input id="save" type="submit" form="updateFlower" value="UPDATE"></a>
                     </form>

@@ -24,3 +24,22 @@
                     };
                     </script>
 */
+
+
+// const fileUpload = require("express-fileupload");
+// const path = require("path");
+
+// app.use(fileUpload());
+
+
+        // if (!req.files) {
+        //     return res.status(400).send("No files were uploaded.");
+        // }
+        // const file = req.files.img;
+        // const path = "mongoose_store/public/images/other/" + file.name;
+
+        // file.mv(path, (err) => {
+        //     if (err) {
+        //         return res.status(500).send(err);
+        //     }
+        // });
