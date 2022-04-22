@@ -31,6 +31,8 @@
 
 // app.use(fileUpload());
 
+// enctype = "multipart/form-data";
+
 
         // if (!req.files) {
         //     return res.status(400).send("No files were uploaded.");

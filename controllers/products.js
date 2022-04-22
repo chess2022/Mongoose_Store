@@ -30,7 +30,6 @@ productRouter.get("/new", (req, res) => {
 productRouter.post("/", (req, res) => {
     Flower.create(req.body, (err, newFlower) => {
     res.redirect("/flowers");
-    // console.log(newFlower)
   });
 });
 
